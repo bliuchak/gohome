@@ -8,7 +8,7 @@ This example can be of course extended up to your needs 🙂
 
 ## Build
 
-1. Build golang binary using `-ldflags` and overwriting variables (`package.var_name`)
+1. Build golang binary using `-ldflags` and overwriting variables in Go programm (`package.var_name`)
     ```bash
     $ go build -ldflags "\
         -X main.version=1.2.3 \
@@ -33,3 +33,12 @@ This example can be of course extended up to your needs 🙂
         "swagger_yaml": "http://127.0.0.1:3000/v1.yaml"
       }
     ```
+
+
+## Docker build and run
+
+### Build
+```docker build . -t gohome:0.1.0```
+
+### Run
+```docker run -it -p 3000:3000 --rm gohome:0.1.0```
